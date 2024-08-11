@@ -1,0 +1,14 @@
+[
+    {
+        "text": "'외화 충전·환전 없이 우대 환율로 결제되는', '[해외] 수수료 면제': '국제 브랜드 수수료(1%) 면제 해외 서비스 수수료(0.25%) 면제', '[해외] 환율우대': '해외 이용 환율우대 100% (USD기준)', '[해외] 공항 라운지 무료': '전 세계 공항 라운지 무료 이용 서비스 (연 2회)', '[국내] 자주 쓰는 일상영역': '온라인 쇼핑/온라인 패션/커피/편의점/영화관 KB Pay 이용건 10% 할인', '[국내] 온라인 항공/면세점': '온라인 항공/면세점 KB Pay 이용건 5% 할인', '[국내] 여행자보험': 'KB손해보험 여행자보험 KB Pay 이용건 10% 할인', '[국내] 철도·고속버스': '철도·고속버스 10% 할인'",
+        "translation": "'A card offering preferential exchange rates for overseas payments and currency conversions without charging any additional fees.', '[Overseas] Transaction Fees Waived':  'International Brand Fee (1%) waived Overseas Service Fee (0.25%) waived', '[Overseas] Preferential Exchange Rates Abroad' : 'Enjoy a 100% preferential exchange rate compared to standard rates when using the card abroad (USD based).','[Overseas] *Free Airport Lounge Access Worldwide' : 'Enjoy complimentary access to airport lounges worldwide up to twice a year.', '[Domestic] Daily Life Benefits in Korea' : 'Receive a 10% discount on KB Pay transactions at online shopping, online fashion, coffee shops, convenience stores and movie theaters.' , '[Domestic] Online Flight & Duty-Free Shopping Benefits in Korea' : 'Enjoy a 5% discount on KB Pay transactions for online flight and duty-free shopping.', '[Domestic] Travel Insurance in Korea' : 'Receive a 10% discount on KB손해보험 travel insurance when using KB Pay.' , '[Domestic] Rail & Bus Travel Benefits in Korea' : 'Enjoy a 10% discount on train and bus travel.'"
+    },
+    {
+        "text": "'화물운전자를 위한 유가보조금 및 SK주유할인 지원카드', '특별서비스 - 영업용화물차': '월 683~4,308L 유가보조금 지원', '주유 - SK에너지(경유)': '화물특화주유소 리터당 30원~100원 할인'",
+        "translation": "'A fuel support and SK gas station discount card designed specifically for truck drivers.','Special Service - Commercial Freight Trucks:  Monthly fuel support ranging from 683 to 4,308 liters.', 'Refueling - SK Energy (Diesel): Fuel discounts of 30 to 100 won per liter at specialized fuel stations for trucks.'"
+    },
+    {
+        "text": "'교통비 SAVE!! 생활서비스 할인 혜택까지~', '대중교통 할인': '대중교통 버스, 지하철 이용시 10% 할인', '생활서비스 할인': '생활서비스 5% 할인  이동통신요금 자동납부  커피 업종  편의점 업종  영화(CGV, 롯데시네마)  패스트푸드 업종', 'KB Pay 이용시 추가할인': '생활서비스 할인 영역에서 KB Pay 이용시 추가 5% 할인'",
+        "translation": "'Save on transportation costs!! Enjoy discounts on various living services too!', 'Public Transportation Discount': '10% discount when using buses and subways.', 'Living Service Discounts' : '5% discount on living services.', 'Automatic payment of mobile phone bills. Coffee shops Convenience stores Cinemas (CGV, Lotte Cinema)  Fast food restaurants',  'Additional Discount with KB Pay: When using KB Pay within the 'Living Service Discounts' category, receive an additional 5% discount.'"
+    }
+]

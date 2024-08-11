@@ -1,0 +1,22 @@
+[
+    {
+        "text": "상품소개:기간 최장 10년 최고 3억원",
+        "translation": "Product Introduction: Period: Up to 10 years, Maximum 300 million KRW"
+    },
+    {
+        "text": "상품특징:직장인이라면 신청 가능 '내맘대로 통장자동대출' 선택 시, 최초 약정한 금액 범위 내에서 사용한도의 자유로운 증액과 감액이 가능하며, 추가 우대금리가 제공됩니다",
+        "translation": "Product Features: Available to office workers. If 'My Customizable Account Automatic Loan' is selected, it allows free increases and decreases within the initially agreed amount, and provides additional preferential interest rates."
+    },
+    {
+        "text": "대출신청자격:재직기간 3개월 이상 당행 선정 우량 직장인 및 재직기간 6개월 이상 일반 직장인 ☞ 단, \"정규직 공무원(최종합격자 포함), 군인(중사 이상), 교사\"는 재직기간 관계없음",
+        "translation": "Loan Application Eligibility: High-quality office workers selected by the bank with a working period of 3 months or more, and general office workers with a working period of 6 months or more. ☞ However, 'permanent civil servants (including those who have passed the final exam), military personnel (sergeant or higher), and teachers' are not subject to the working period requirement."
+    },
+    {
+        "text": "대출금액:최대 3억원 이내(단, 재직기간 1년 미만 사회초년생은 최대 5천만원 이내) - 종합통장자동대출은 최대 1억원 이내 - 금융소외계층(최근 2년 이내 신용카드 실적 및 최근 3년 이내 대출실적 없는 고객)은 최대 3백만원 이내 기본한도 제공 ※ 대출한도는 신용평가결과에 따라 차등 적용됩니다.",
+        "translation": "Loan Amount: Up to 300 million KRW (However, for new employees with less than 1 year of employment, up to 50 million KRW) - Comprehensive account automatic loan up to 100 million KRW - Financially excluded groups (customers without credit card performance in the last 2 years and loan performance in the last 3 years) are provided with a basic limit of up to 3 million KRW. ※ The loan limit is applied differently according to the credit evaluation result."
+    },
+    {
+        "text": "대출기간 및 상환 방법:일시상환(종합통장자동대출 포함) : 1년(최장 10년이내 기한연장 가능) ※ 종합통장자동대출의 경우 아래 중 선택 ① 일반방식 한도거래대출(종합통장자동대출)",
+        "translation": "Loan Period and Repayment Method: Lump-sum repayment (including comprehensive account automatic loan): 1 year (extension possible up to 10 years). ※ In the case of comprehensive account automatic loans, choose from the following: ① General method limit transaction loan (comprehensive account automatic loan)."
+    }
+]

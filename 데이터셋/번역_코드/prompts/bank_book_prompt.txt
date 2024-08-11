@@ -1,0 +1,22 @@
+[
+    {
+        "text": "상품 소개: 대상 압류금지 수급금 수령고객 혜택 수수료면제",
+        "translation": "Product Introduction: Target: Customers receiving non-seizable benefits, Benefits: Fee waiver"
+    },
+    {
+        "text": "상품특징: 법령에 따른 압류금지 수급금에 대해 수급권을 제한하는 거래가 금지되고, 수급금 수령 실적이 있는 경우 각종 은행거래 수수료를 면제해주는 압류방지 전용통장",
+        "translation": "Product Features: A special account to prevent seizure, where transactions restricting benefit rights are prohibited by law. If there are benefit receipt records, various bank transaction fees are waived."
+    },
+    {
+        "text": "가입대상: 법령에 따라 압류금지 수급금을 지급받는 다음 각호의 실명의 개인(수급자격별 1인1계좌) -「구직자 취업촉진 및 생활안정지원에 관한 법률」에서 정하는 구직촉진수당 등을 수령하는 고객(취업이룸통장)",
+        "translation": "Eligibility: Individual recipients of non-seizable benefits as defined by law (one account per qualification) - Customers receiving job-seeking promotion allowances, etc., as defined by the 'Job Seekers' Employment Promotion and Livelihood Stability Support Act' (Job Success Account)"
+    },
+    {
+        "text": "상품유형: 입출금이 자유로운예금(저축예금)",
+        "translation": "Product Type: Flexible Savings Account (Deposit Account)"
+    },
+    {
+        "text": "가입기간: 2023.7.3 ~ 2024.12.31",
+        "translation": "Subscription Period:2023.7.3 ~ 2024.12.31"
+    }
+]

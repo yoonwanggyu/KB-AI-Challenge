@@ -1,0 +1,22 @@
+[
+    {
+        "text": "상품 소개:기간 1~36개월 금액 1백만원 이상 금리 연 2.7% ~ 3.45% 2024.07.11 기준, 세금공제전, 우대금리포함",
+        "translation": "Product Introduction: Period: 1 to 36 months Amount: 1 million KRW or more Interest rate: 2.7% ~ 3.45% per annum (as of July 11, 2024, before tax, including preferential rates)"
+    },
+    {
+        "text": "상품특징:인터넷뱅킹, KB스타뱅킹, 고객센터를 통해서만 가입가능한 Digital KB 대표 정기예금으로, 자동 만기관리부터 분할인출까지 가능한 편리한 온라인 전용 정기예금입니다.",
+        "translation": "Product Features: This is a representative Digital KB fixed deposit available only through internet banking, KB Star Banking, and the customer center. It is a convenient online-exclusive fixed deposit that allows automatic maturity management and partial withdrawals."
+    },
+    {
+        "text": "가입대상:개인 및 개인사업자",
+        "translation": "Eligibility: Individuals and individual businesses"
+    },
+    {
+        "text": "계약기간:1개월 이상 36개월 이하(월단위)",
+        "translation": "Contract Period: 1 month to 36 months (in monthly units)"
+    },
+    {
+        "text": "가입금액:1백만원 이상 (추가입금 불가)",
+        "translation": "Subscription Amount: 1 million KRW or more (additional deposits not allowed)"
+    }
+]
