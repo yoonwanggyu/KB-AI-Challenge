@@ -1,2 +1,2 @@
-# -2024-Alpaco_Final_Project
+# KB Future Finance AI CHALLENGE
  
