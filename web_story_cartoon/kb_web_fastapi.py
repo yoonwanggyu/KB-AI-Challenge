@@ -15,6 +15,8 @@ import time
 
 app = FastAPI()
 app.mount("/static", StaticFiles(directory="static", html=True), name="static")
+app.mount("/comfyui", StaticFiles(directory="./comfyui/ComfyUI"), name="comfyui")
+
 
 templates = Jinja2Templates(directory="templates")
 
@@ -132,7 +134,7 @@ def llm_gen_fn(cardN):
 
 
         for i in range(4):
-            with open("/home/alpaco/web_story_cartoon/comfyui/ComfyUI/prompt.txt","w") as f:
+            with open(f"/home/alpaco/web_story_cartoon/comfyui/ComfyUI/prompt_{str(i)}.txt","w") as f:
                 f.write(gen_story_list[i])
 
             # 실행할 Python 스크립트 파일 경로
@@ -141,7 +143,8 @@ def llm_gen_fn(cardN):
             # Python 명령어 실행
             try:
                 result = subprocess.run(
-                    ["/home/alpaco/miniconda3/envs/comfy_main/bin/python", script_path],
+                    ["/home/alpaco/miniconda3/envs/comfy_main/bin/python", script_path,
+                    "--args", str(i)],
                     capture_output=True,
                     text=True,
                     check=True,
@@ -312,7 +315,7 @@ def REGEN_llm_gen_fn(question):
 
         
         for i in range(4):
-            with open("/home/alpaco/web_story_cartoon/comfyui/ComfyUI/prompt.txt","w") as f:
+            with open(f"/home/alpaco/web_story_cartoon/comfyui/ComfyUI/prompt_{str(i)}.txt","w") as f:
                 f.write(gen_story_list[i])
 
             # 실행할 Python 스크립트 파일 경로
@@ -321,14 +324,15 @@ def REGEN_llm_gen_fn(question):
             # Python 명령어 실행
             try:
                 result = subprocess.run(
-                    ["/home/alpaco/miniconda3/envs/comfy_main/bin/python", script_path],
+                    ["/home/alpaco/miniconda3/envs/comfy_main/bin/python", script_path,
+                    "--args", str(i)],
                     capture_output=True,
                     text=True,
                     check=True,
                     cwd="/home/alpaco/web_story_cartoon/comfyui/ComfyUI",
                     env={**os.environ, "CUDA_VISIBLE_DEVICES": "1"}  # 2번째 GPU 사용 설정
-            # 이동할 디렉토리 경로 지정
                 )
+
             except subprocess.CalledProcessError as e:
                 print(f"Error Output:\n{e.stderr}")
 
@@ -403,17 +407,20 @@ def REGEN_llm_gen_fn(question):
 async def oneregen_image(request:Request,selectedImg: int = Form(...), positivePrompt: str = Form(...), negativePrompt: str = Form(...)):
     # 선택한 이미지 번호, 긍정 프롬프트, 부정 프롬프트를 받음
     selectedImg = selectedImg-1
-    with open("/home/alpaco/web_story_cartoon/comfyui/ComfyUI/prompt.txt","w") as f:
-        f.write(positivePrompt)
+    with open(f"/home/alpaco/web_story_cartoon/comfyui/ComfyUI/prompt_{selectedImg}.txt","w") as f:
+        f.write(positivePrompt +'\n')
         f.write(negativePrompt)
+
 
     # 1개 생성 
     script_path = "comfy_run.py"
+    
 
     # Python 명령어 실행
     try:
         result = subprocess.run(
-            ["/home/alpaco/miniconda3/envs/comfy_main/bin/python", script_path],
+            ["/home/alpaco/miniconda3/envs/comfy_main/bin/python", script_path,
+            "--args", str(selectedImg)],
             capture_output=True,
             text=True,
             check=True,
@@ -462,6 +469,7 @@ async def oneregen_image(request:Request,selectedImg: int = Form(...), positiveP
             f.write(i.replace("\n","")+"\n")
 
     try:
+        time.sleep(1)
         result = subprocess.run(
             f"cp -r /home/alpaco/web_story_cartoon/comfyui/ComfyUI/output/{newfile} /home/alpaco/web_story_cartoon/static/{newfile}",
             shell=True,  # Enables shell features, such as wildcard expansion

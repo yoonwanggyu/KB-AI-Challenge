@@ -3,6 +3,8 @@ import random
 import sys
 from typing import Sequence, Mapping, Any, Union
 import torch
+import argparse
+
 
 
 def get_value_at_index(obj: Union[Sequence, Mapping], index: int) -> Any:
@@ -29,58 +31,58 @@ def get_value_at_index(obj: Union[Sequence, Mapping], index: int) -> Any:
         return obj["result"][index]
 
 
-def find_path(name: str, path: str = None) -> str:
-    """
-    Recursively looks at parent folders starting from the given path until it finds the given name.
-    Returns the path as a Path object if found, or None otherwise.
-    """
-    # If no path is given, use the current working directory
-    if path is None:
-        path = os.getcwd()
+# def find_path(name: str, path: str = None) -> str:
+#     """
+#     Recursively looks at parent folders starting from the given path until it finds the given name.
+#     Returns the path as a Path object if found, or None otherwise.
+#     """
+#     # If no path is given, use the current working directory
+#     if path is None:
+#         path = os.getcwd()
 
-    # Check if the current directory contains the name
-    if name in os.listdir(path):
-        path_name = os.path.join(path, name)
-        print(f"{name} found: {path_name}")
-        return path_name
+#     # Check if the current directory contains the name
+#     if name in os.listdir(path):
+#         path_name = os.path.join(path, name)
+#         print(f"{name} found: {path_name}")
+#         return path_name
 
-    # Get the parent directory
-    parent_directory = os.path.dirname(path)
+#     # Get the parent directory
+#     parent_directory = os.path.dirname(path)
 
-    # If the parent directory is the same as the current directory, we've reached the root and stop the search
-    if parent_directory == path:
-        return None
+#     # If the parent directory is the same as the current directory, we've reached the root and stop the search
+#     if parent_directory == path:
+#         return None
 
-    # Recursively call the function with the parent directory
-    return find_path(name, parent_directory)
-
-
-def add_comfyui_directory_to_sys_path() -> None:
-    """
-    Add 'ComfyUI' to the sys.path
-    """
-    comfyui_path = find_path("ComfyUI")
-    if comfyui_path is not None and os.path.isdir(comfyui_path):
-        sys.path.append(comfyui_path)
-        print(f"'{comfyui_path}' added to sys.path")
+#     # Recursively call the function with the parent directory
+#     return find_path(name, parent_directory)
 
 
-def add_extra_model_paths() -> None:
-    """
-    Parse the optional extra_model_paths.yaml file and add the parsed paths to the sys.path.
-    """
-    from main import load_extra_path_config
-
-    extra_model_paths = find_path("extra_model_paths.yaml")
-
-    if extra_model_paths is not None:
-        load_extra_path_config(extra_model_paths)
-    else:
-        print("Could not find the extra_model_paths config file.")
+# def add_comfyui_directory_to_sys_path() -> None:
+#     """
+#     Add 'ComfyUI' to the sys.path
+#     """
+#     comfyui_path = find_path("ComfyUI")
+#     if comfyui_path is not None and os.path.isdir(comfyui_path):
+#         sys.path.append(comfyui_path)
+#         print(f"'{comfyui_path}' added to sys.path")
 
 
-add_comfyui_directory_to_sys_path()
-add_extra_model_paths()
+# def add_extra_model_paths() -> None:
+#     """
+#     Parse the optional extra_model_paths.yaml file and add the parsed paths to the sys.path.
+#     """
+#     from main import load_extra_path_config
+
+#     extra_model_paths = find_path("extra_model_paths.yaml")
+
+#     if extra_model_paths is not None:
+#         load_extra_path_config(extra_model_paths)
+#     else:
+#         print("Could not find the extra_model_paths config file.")
+
+
+# add_comfyui_directory_to_sys_path()
+# add_extra_model_paths()
 
 
 def import_custom_nodes() -> None:
@@ -110,7 +112,7 @@ def import_custom_nodes() -> None:
 from nodes import (
     CLIPTextEncode,
     KSampler,
-    NODE_CLASS_MAPPINGS,
+    NODE_CLASS_MAPPINGS, 
     CheckpointLoaderSimple,
     SaveImage,
     EmptyLatentImage,
@@ -118,16 +120,26 @@ from nodes import (
 )
 
 
-# prompt.txt 에서 프롬프트 내용을 가져옴 
+# # prompt.txt 에서 프롬프트 내용을 가져옴 
 def main():
-    with open("prompt.txt", "r") as f:
+    parser = argparse.ArgumentParser(description="Process some files.")
+    
+    # 여기에 원하는 인수를 추가
+    parser.add_argument('--args', type=str, help='Path to the input file')
+    
+
+
+    args = parser.parse_args()
+    with open(f"prompt_{args.args}.txt", "r") as f:
         prompt= f.readline().strip() # 긍정 프롬프트 
         negative_prompt = f.readline().strip() # 부정 프롬프트 
         
     # 부정 프롬프트는 default 지정 
     if negative_prompt == '' : 
         negative_prompt = "text, watermark, low quality, worst quality, extra hands, extra hand, japan, china ugly, extra limb, ugly eyes"
+
     
+
     print("입력된 프롬프트: ",prompt)
     print("입력된 부정 프롬프트: ",negative_prompt)
     
@@ -188,6 +200,9 @@ def main():
                 filename_prefix="ComfyUI", images=get_value_at_index(vaedecode_8, 0)
             )
 
+    with open(f"prompt_{args.args}.txt","w") as f:
+        f.write(prompt+'\n')
+        f.write(negative_prompt)
 
 if __name__ == "__main__":
     main()
