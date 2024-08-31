@@ -1,4 +1,8 @@
 # The 6th KB AI Future Finance Challenge
+
+# 🏆수상
+**KB 국민은행 최우수상 수상**
+
 # 1) 프로젝트 수행 기간
 2024년 7월 1일 ~ 8월 11일, 제 6회 KB 국민은행 AI Challenge 제출작 및 딥러닝 부트 캠프 최종 프로젝트
 # 2) 프로젝트 개요
