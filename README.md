@@ -1,5 +1,8 @@
 ![header](https://capsule-render.vercel.app/api?type=Waving&color=auto&height=300&fontAlignY=50&fontAlign=50&section=header&text=The%206th%20KB%20AI%20Future%20Finance%20Challenge&fontSize=40)
-<div align=center></div>
+<div align=center>
+
+대규모 언어 모델(LLM)과 이미지 생성 모델(stable diffusion)을 결합하여 **KB 금융 상품에 대한 고객들의 이해도를 높이고 혜택을 효과적으로 전달하는 AI 콘텐츠 마케터 "Kard-Toon"을 제시한다.**
+</div>
 
 
 # 🏆수상
