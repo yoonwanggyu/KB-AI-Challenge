@@ -1,4 +1,6 @@
-# The 6th KB AI Future Finance Challenge
+![header](https://capsule-render.vercel.app/api?type=Waving&color=auto&height=300&fontAlignY=50&fontAlign=50&section=header&text=The%206th%20KB%20AI%20Future%20Finance%20Challenge&fontSize=40)
+<div align=center></div>
+
 
 # 🏆수상
 **KB 국민은행 최우수상 수상**
