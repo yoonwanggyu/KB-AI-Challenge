@@ -8,6 +8,14 @@
 # 🏆수상
 **KB 국민은행 최우수상 수상**
 
+# 👪 팀원
+| 이름          | GitHub 프로필                                             |
+| ------------- | --------------------------------------------------------- |
+| 윤왕규        | [@yoonwanggyu](https://github.com/yoonwanggyu)              |
+| 최용우        | [@choiyongwoo](https://github.com/choiyongwoo)        |
+| 문예준        | [@nurungee22](https://github.com/nurungee22)                |
+
+
 # 1) 프로젝트 수행 기간
 2024년 7월 1일 ~ 8월 11일, 제 6회 KB 국민은행 AI Challenge 제출작 및 딥러닝 부트 캠프 최종 프로젝트
 # 2) 프로젝트 개요
